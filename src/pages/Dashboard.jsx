@@ -47,7 +47,7 @@ export default function Dashboard() {
             </header>
 
             <div className="status-summary">
-                <div className="status-box status-box-online"> onClick={() => setFilter()}
+                <div className="status-box status-box-online"> 
                     <div><span className="status-number">{onlineCount}</span><p>Online</p></div>
                     <i className="bi bi-wifi"></i>
                 </div>
