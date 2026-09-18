@@ -1,16 +1,30 @@
-# React + Vite
+# MaveSec — Smart Home Security Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MaveSec is a React-based smart home security dashboard. Users log in to view the real-time status of home security devices and view live camera feeds.
 
-Currently, two official plugins are available:
+## Login screen
+![MaveSec Login Screenshot](./screenshots/login.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Dashboard
+![MaveSec Dashboard Screenshot](./screenshots/dashboard.png)
 
-## React Compiler
+## Camera feed modal
+![MaveSec Video Modal Screenshot](./screenshots/modal.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Login credentials
 
-## Expanding the ESLint configuration
+- Email: `john@mail.com`
+- Password: `admin`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Protected login flow using React Context for authentication state
+- Persistent login across page refreshes via `localStorage`
+- Route guarding — the dashboard is inaccessible unless logged in, enforced via a custom `RequireAuth` route wrapper
+- Real-time device status overview (Online / Alerts / Offline counts)
+- Filter devices by type (Camera, Door, Window, Motion)
+- Click-to-view video modal for camera devices, with autoplaying embedded YouTube feed
+- Pulsing "Online" status indicator
+- Custom black-and-red theme with Chakra Petch typography
+- Fully client-side routing via React Router
+
